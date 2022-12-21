@@ -1,0 +1,15 @@
+/home/lucas/Escritorio/CSHARP/bin/Debug/net7.0/CSHARP
+/home/lucas/Escritorio/CSHARP/bin/Debug/net7.0/CSHARP.deps.json
+/home/lucas/Escritorio/CSHARP/bin/Debug/net7.0/CSHARP.runtimeconfig.json
+/home/lucas/Escritorio/CSHARP/bin/Debug/net7.0/CSHARP.dll
+/home/lucas/Escritorio/CSHARP/bin/Debug/net7.0/CSHARP.pdb
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.csproj.AssemblyReference.cache
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.GeneratedMSBuildEditorConfig.editorconfig
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.AssemblyInfoInputs.cache
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.AssemblyInfo.cs
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.csproj.CoreCompileInputs.cache
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.dll
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/refint/CSHARP.dll
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.pdb
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/CSHARP.genruntimeconfig.cache
+/home/lucas/Escritorio/CSHARP/obj/Debug/net7.0/ref/CSHARP.dll
