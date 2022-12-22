@@ -1,6 +1,6 @@
 namespace ConsoleApplication2
 {
-    public class Libro
+    public class Libro:Persona
     {
         //Properties 
         private string Author;

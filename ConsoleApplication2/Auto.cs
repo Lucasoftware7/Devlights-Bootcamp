@@ -10,23 +10,28 @@ namespace ConsoleApplication2
         
         public Auto()
         {
+            
         }
 
         private Persona Propietario;
 
         public void setPropietario(Persona paramPropietario)
         {
-            if (Edad > 18 && getLicenciaDeConducir() == true)
+
+
+            Console.WriteLine("Asginando un propietario");
+  
+            if (paramPropietario.Edad >= 18 && (paramPropietario.getLicenciaDeConducir() == true))
             {
-                Console.WriteLine("Asignando el vehiculo " + Marca + Modelo + " a su propietario");
+                Console.WriteLine("Asignando el vehiculo " + Marca +" " + Modelo + " a su propietario");
                 Propietario = paramPropietario;
                 setEsPropietario(true);
             }
-            else if (Edad < 18)
+            else if (paramPropietario.Edad < 18)
             {
                 Console.WriteLine("Eres demasiado joven!, debes ser mayor de 18 para conducir");
             }
-            else if (getLicenciaDeConducir() == false)
+            else if (paramPropietario.getLicenciaDeConducir() == false)
             {
                 Console.WriteLine("No tienes lincencia de conducir, necesitas una para hacerlo!");
             }
@@ -42,6 +47,8 @@ namespace ConsoleApplication2
         
         public bool Encendido { get; set; }
         public int velocidad { get; set; }
+        
+     //   public int Count { get; set; }
 
         public int NumeroPasajeros;
 
@@ -57,16 +64,10 @@ namespace ConsoleApplication2
             return Pasajeros;
         }
 
-        public void setPasajeros(int paramPasajeros)
+        public void setNumeroPasajeros()
         {
-            if (paramPasajeros <= 10)
-            {
-                NumeroPasajeros = paramPasajeros;
-            }
-            else
-            {
-                Console.WriteLine("Se puede llevar hasta 10 pasajeros como maximo!");
-            }
+            Console.WriteLine(Pasajeros.Count);
+            NumeroPasajeros = Pasajeros.Count; 
         }
 
         public int getNumeroPasajeros()

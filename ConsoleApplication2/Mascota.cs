@@ -4,23 +4,63 @@ namespace ConsoleApplication2
 {
     public class Mascota
     {
-        
+        //Constructor & inital values 
         public Mascota()
         {
-            energia = 100;
+            Energia = 100;
         }
-        public string nombre { get; set; }
-        public string tipo { get; set; }
-        public int energia { get; set; }
+        //Properties
+        private string Nombre;
+        private string Tipo;
+        private int Energia;
+        
+        //Getters & setters
+        public void setNombre(string paramNombre)
+        {
+            Nombre = paramNombre;
+        }
+
+        public string getNombre()
+        {
+            return Nombre;
+        }
+
+        public void setTipo(string paramTipo)
+        {
+            Tipo = paramTipo;
+        }
+
+        public string getTipo()
+        {
+            return Tipo;
+        }
+
+        public void setEnergia(int paramEnergia)
+        {
+            Energia = paramEnergia;
+        }
+
+        public int getEnergia()
+        {
+            return Energia;
+        }
+
+        //Methods
+        public void Comer()
+        {
+            Console.WriteLine("Estoy comiendo alimento balanceado y recuperando energia!");
+            Energia = Energia + 30;
+        }
+        
         public void Correr()
         {
             
-            if (energia >= 20)
+            if (Energia >= 20)
             {
                 Console.WriteLine("Estoy Corriendo!!!");
-                energia=energia - 10;
+                Energia=Energia - 10;
             }
-            if (energia < 20)
+            if (Energia < 20)
             {
                 Console.WriteLine("Estoy agotado, necesito descansar!");
             }

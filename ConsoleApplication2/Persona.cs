@@ -13,12 +13,23 @@ namespace ConsoleApplication2
         public int Edad;
         private bool LicenciaDeConducir;
         private bool EsPropietario;
+        private bool TieneCelular;
+        private Smartphone Celular;
         
     public Persona()
         {
             FechaActual=DateTime.Now;
         }
     // Getters & Setters
+    public void setTieneCelular(bool paramcelular)
+    {
+        TieneCelular = paramcelular;
+    }
+
+    public bool getTieneCelular()
+    {
+        return TieneCelular;
+    }
     public void setEsPropietario(bool valor)
     {
         EsPropietario = valor;
@@ -74,15 +85,7 @@ namespace ConsoleApplication2
         }
     }
         
-        public void nombreYApellido()
-        {
-            Console.WriteLine("ingrese un nombre");
-            string nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese un apellido");
-            string apellido = Console.ReadLine();
-            
-            Console.WriteLine($"Bienvenido! {nombre} {apellido}");
-        }
+       
 
         public int calcularEdad()
         {
@@ -96,7 +99,18 @@ namespace ConsoleApplication2
             Vehiculo = paramAuto;
             Console.WriteLine($"Verificnado resultado {Vehiculo}");
         }
-
+        // CLass methods 
+        
+        
+        public void nombreYApellido()
+        {
+            Console.WriteLine("ingrese un nombre");
+            string nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese un apellido");
+            string apellido = Console.ReadLine();
+            
+            Console.WriteLine($"Bienvenido! {nombre} {apellido}");
+        }
         public void UsarVehiculo()
         {
             if (EsPropietario == true)
@@ -108,6 +122,13 @@ namespace ConsoleApplication2
                 Console.WriteLine("No eres propietario de un vehiculo!");
             }
         }
+
+        public void ObtenerCelular(Smartphone celular)
+        {
+            Console.WriteLine("Obtuviste un celular marca: {0} modelo: {1}, felicidades!",celular.Marca,celular.Modelo);
+            TieneCelular = true;
+        }
+        
         
     }
 }
