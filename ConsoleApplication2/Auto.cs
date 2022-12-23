@@ -41,19 +41,36 @@ namespace ConsoleApplication2
         {
             return Propietario;
         }
+
+        private int v1;
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Color { get; set; }
         
         public bool Encendido { get; set; }
         public int velocidad { get; set; }
+
+        public int velocidadActual;
         
      //   public int Count { get; set; }
 
         public int NumeroPasajeros;
 
         public List<Persona> Pasajeros;
+        
+        
+        //Getters & Setters
 
+        public void setVelocidadActual()
+        {
+             v1 = velocidad;
+            velocidadActual = v1;
+        }
+
+        public int getVelocidadActual()
+        {
+            return velocidadActual;
+        }
         public void setPasajeros(List<Persona> paramPasajeros)
         {
             Pasajeros = paramPasajeros;
@@ -74,8 +91,29 @@ namespace ConsoleApplication2
         {
             return NumeroPasajeros;
         }
-
         
+        //Methods
+
+        public void bajarPasajeros(List<Persona> paramListaPersona)
+        {
+            if (Encendido && velocidad > 0)
+            {
+                Console.WriteLine("No se puede bajar de un auto en movimiento!!!, detengalo para poder bajar");
+            }
+            else if (Encendido == true && velocidad == 0)
+            {
+                Console.WriteLine("No se puede bajar del auto sin apagarlo, deten el motor primero!");
+            }
+            else
+            {
+                Console.WriteLine("Bajando pasajeros...");
+                paramListaPersona.Clear();
+                int pasajeros_restantes = paramListaPersona.Count;
+                NumeroPasajeros = pasajeros_restantes;
+            }
+
+        }
+
         public void mostrarInfo()
         {
             Console.WriteLine("Los datos del automovil son. \n Marca: {0} \n Modelo: {1} \n Color: {2}",Marca, Modelo,Color);
@@ -120,6 +158,23 @@ namespace ConsoleApplication2
             }
         }
 
+        public void apagarVehiculo()
+        {
+            if (Encendido && velocidad==0)
+            {
+                Console.WriteLine("Apagando vehiculo...");
+                Encendido = false;
+            }
+            else if (velocidad > 0)
+            {
+                Console.WriteLine("Debes Frenar el auto antes de apagarlo!!!");
+            }
+            else
+            {
+                Console.WriteLine("El vehiculo ya se encuentra apagado!");
+            }
+        }
+
         public void acelerar()
         {
             if (Encendido == true && velocidad < 150) 
@@ -152,6 +207,11 @@ namespace ConsoleApplication2
             {
                 Console.WriteLine("El vehiculo ya se encuentra detenido.");
             }
+        }
+
+        public void velocimetro()
+        {
+            Console.WriteLine("En este momento la velocidad del vehiculo es de {0} Km/h",getVelocidadActual());
         }
         
         

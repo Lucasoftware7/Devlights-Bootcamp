@@ -48,9 +48,22 @@ namespace ConsoleApplication2
             Console.WriteLine("Tiene licencia? "+persona.getLicenciaDeConducir());
             auto.setPasajeros(passengers);
             auto.setNumeroPasajeros();
+            auto.acelerar();
+            Console.WriteLine("Velocidad actual = "+auto.getVelocidadActual());
+            Console.WriteLine(auto.velocidad);
+            auto.acelerar();
+            Console.WriteLine(auto.velocidad);
+            auto.velocimetro();
+            Console.WriteLine(auto.getVelocidadActual());
+            auto.frenar();
+      //      auto.frenar();
+            Console.WriteLine(auto.velocidad);
+            auto.apagarVehiculo();
+            Console.WriteLine(auto.velocidad);
             Console.WriteLine("Obteniendo el numero de pasajeros ");
             Console.WriteLine(auto.getNumeroPasajeros());
-            
+            auto.bajarPasajeros(passengers);
+            Console.WriteLine("Hay pasajeros aun? "+ auto.getNumeroPasajeros());
 
 
         }
